@@ -11,9 +11,9 @@ class FashionController extends Controller
         $featuredProducts = [
             [
                 'id' => 1,
-                'name' => 'Urban Jacket',
+                'name' => 'Varsity Jacket',
                 'price' => '250K Rp',
-                'image' => 'product1.jpg',
+                'image' => 'Haruja.jpeg',
                 'is_new' => true
             ],
             [
@@ -88,9 +88,9 @@ class FashionController extends Controller
     public function about()
     {
         $teamMembers = [
-            ['name' => 'Alex Johnson', 'position' => 'Founder & CEO', 'bio' => 'Fashion enthusiast with 15 years in the industry.'],
-            ['name' => 'Sarah Miller', 'position' => 'Head Designer', 'bio' => 'Creates trends that define generations.'],
-            ['name' => 'Michael Chen', 'position' => 'Marketing Director', 'bio' => 'Bridges fashion with the digital world.']
+            ['name' => 'Tiara Basori', 'position' => 'Founder', 'bio' => 'Fashion is art.'],
+            ['name' => 'Hitori Gotou', 'position' => 'Marketing', 'bio' => 'I-I dont know wwhat to say.'],
+            ['name' => 'Nakano Nino', 'position' => 'Supervisor', 'bio' => 'You better take responsibility..']
         ];
 
         return view('about', ['team' => $teamMembers]);

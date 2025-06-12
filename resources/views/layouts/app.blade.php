@@ -12,7 +12,7 @@
         <div class="container">
             <div class="header-content">
                 <a href="{{ route('home') }}" class="logo">
-                    <img src="{{ asset('Clothing shop logo to _ I_D FASHION STORE_.jpeg') }}" alt="Fashion Site Logo">
+                    <img src="{{ asset('logoweb.jpeg') }}" alt="Fashion Site Logo">
                 </a>
                 <nav class="main-nav">
                     <ul>
@@ -73,7 +73,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2023 Fashion Site. All rights reserved.</p>
+                <p>&copy; 2025 Dunia Fashion</p>
             </div>
         </div>
     </footer>

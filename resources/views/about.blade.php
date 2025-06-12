@@ -3,204 +3,203 @@
 @section('title', 'About Us')
 
 @section('content')
+    <link rel="stylesheet" href="{{ asset('css/about.css') }}">
+
+    <!-- Hero Section -->
     <section class="about-hero">
         <div class="container">
-            <h1 class="hero-title">Our Story</h1>
+            <h1>Our Story</h1>
+            <p class="subtitle">Discover how we started and where we're headed in fashion.</p>
         </div>
     </section>
 
+    <!-- About Content -->
     <section class="about-content">
         <div class="container">
-            <div class="about-text">
-                <h2 class="section-title">Who We Are</h2>
-                <p class="fade-in">Dunia Fashion is a vibrant and inspiring fashion store that has been serving style lovers since 2010. Founded in the heart of Yogyakarta, Indonesia, Dunia Fashion began as a small boutique with a big vision: to bring the latest fashion trends to everyone</p>
-                <p class="fade-in">In its early years, Dunia Fashion mainly offered casual wear and traditional clothing such as batik dresses and modern kebaya. With limited space and a small team, the boutique focused on building a loyal customer base by providing high-quality products and personalized service.</p>
-            </div>
+            <h2>Who We Are</h2>
+            <p>
+                Founded in 2010, Fashion Site has been at the forefront of contemporary fashion, blending style with comfort and sustainability. Our mission is to provide high-quality, fashionable clothing that doesn't compromise on ethics or the environment.
+            </p>
+            <p>
+                From our humble beginnings as a small boutique to becoming a recognized name in fashion, we've stayed true to our core values of innovation, quality, and customer satisfaction.
+            </p>
         </div>
     </section>
 
+    <!-- Team Section -->
     <section class="team-section">
         <div class="container">
-            <h2 class="section-title">Meet The Team</h2>
+            <h2>Meet The Team</h2>
             <div class="team-grid">
-                <!-- Team Member 1 -->
-                <div class="team-card" data-aos="fade-up">
-                    <div class="team-photo" style="background-image: url('/Tiara basori.jpeg');"></div>
-                    <h3>Sarah Johnson</h3>
-                    <p class="position">Founder</p>
-                    <p class="bio">Fashion is about art.</p>
-                </div>
+                @foreach($team as $index => $member)
+                    <div class="team-card">
+                        <div class="team-photo">
+                            @php
+                                $photos = [
+                                    'Tiara Basori.jpeg',
+                                    'bochi.jpeg',
+                                    'Nino _3.jpeg',
 
-                <!-- Team Member 2 -->
-                <div class="team-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="team-photo" style="background-image: url('/Bochi.jpeg');"></div>
-                    <h3>Michael Chen</h3>
-                    <p class="position">Marketing</p>
-                    <p class="bio">I-I don't know what to say.</p>
-                </div>
-
-                <!-- Team Member 3 -->
-                <div class="team-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="team-photo" style="background-image: url('/Nino _3.jpeg');"></div>
-                    <h3>Emma Rodriguez</h3>
-                    <p class="position">Supervisor</p>
-                    <p class="bio">There has to be at least one person on Earth, who would love a tactless guy like you.</p>
-                </div>
+                                ];
+                                $photoUrl = $photos[$index] ?? 'https://via.placeholder.com/150';
+                            @endphp
+                            <img src="{{ $photoUrl }}" alt="{{ $member['name'] }}">
+                        </div>
+                        <h3>{{ $member['name'] }}</h3>
+                        <p class="position">{{ $member['position'] }}</p>
+                        <p class="bio">{{ $member['bio'] }}</p>
+                    </div>
+                @endforeach
             </div>
         </div>
     </section>
 
     <style>
-        :root {
-            --primary: #6C63FF;
-            --accent: #F6F7FB;
-            --text-dark: #1f1f1f;
-            --text-light: #5f5f5f;
-            --white: #ffffff;
-            --glass: rgba(255, 255, 255, 0.7);
-        }
-
+        /* General Reset & Fonts */
         body {
-            font-family: 'Poppins', sans-serif;
-            background-color: var(--accent);
-            color: var(--text-dark);
+            font-family: 'Segoe UI', sans-serif;
             margin: 0;
             padding: 0;
-            line-height: 1.7;
+            color: #333;
+            line-height: 1.6;
+            background-color: #f7f9fc;
         }
 
-        .about-hero {
-            background: linear-gradient(135deg, var(--primary), #9e9dff);
-            color: var(--white);
-            padding: 120px 0;
-            text-align: center;
-        }
-
-        .hero-title {
-            font-size: 3.5rem;
-            font-weight: 700;
-            animation: fadeInUp 0.8s ease-out forwards;
-        }
-
-        .about-content {
-            padding: 70px 20px;
-            max-width: 800px;
+        .container {
+            max-width: 1100px;
             margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero Section */
+        .about-hero {
+            background: linear-gradient(to right, #6a82fb, #fc5c7d);
+            color: white;
             text-align: center;
+            padding: 80px 20px;
+            animation: fadeIn 1s ease-in-out;
         }
 
-        .section-title {
-            font-size: 2.5rem;
-            color: var(--primary);
-            margin-bottom: 30px;
-            position: relative;
+        .about-hero h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            animation: slideIn 0.5s ease forwards;
         }
 
-        .section-title::after {
-            content: '';
-            width: 60px;
-            height: 4px;
-            background: var(--primary);
-            display: block;
-            margin: 10px auto 0;
-            border-radius: 2px;
+        .about-hero .subtitle {
+            font-size: 1.2em;
+            opacity: 0.9;
         }
 
-        .about-text p {
+        /* About Content */
+        .about-content {
+            padding: 60px 20px;
+            background: #ffffff;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .about-content h2 {
+            font-size: 2em;
             margin-bottom: 20px;
-            color: var(--text-light);
-            font-size: 1.1rem;
+            color: #6a82fb;
         }
 
+        .about-content p {
+            max-width: 800px;
+            margin: 10px auto;
+            font-size: 1.05em;
+            color: #555;
+        }
+
+        /* Team Section */
         .team-section {
-            padding: 70px 20px;
+            background-color: #f2f2f2;
+            padding: 60px 20px;
+        }
+
+        .team-section h2 {
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 40px;
+            color: #6a82fb;
         }
 
         .team-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 40px;
-            max-width: 1200px;
-            margin: 0 auto;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
         }
 
         .team-card {
-            background: var(--glass);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            padding: 30px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
             text-align: center;
-            transition: transform 0.3s ease;
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: fadeIn 1s ease-in-out;
         }
 
         .team-card:hover {
-            transform: translateY(-8px);
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
         }
 
         .team-photo {
-            width: 110px;
-            height: 110px;
-            background-size: cover;
-            background-position: center;
-            border-radius: 50%;
+            width: 100px;
+            height: 100px;
             margin: 0 auto 15px;
-            border: 4px solid var(--primary);
+            overflow: hidden;
+            border-radius: 50%;
+            background: #ddd;
+        }
+
+        .team-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .team-card h3 {
-            margin-top: 10px;
-            font-size: 1.3rem;
-            color: var(--text-dark);
+            margin: 10px 0 5px;
+            font-size: 1.2em;
+            color: #333;
         }
 
         .position {
-            color: var(--primary);
-            font-weight: 600;
+            font-style: italic;
+            color: #6a82fb;
             margin-bottom: 10px;
         }
 
         .bio {
-            font-size: 0.95rem;
-            color: var(--text-light);
+            font-size: 0.95em;
+            color: #555;
         }
 
-        /* Animation */
-        @keyframes fadeInUp {
+        /* Animations */
+        @keyframes fadeIn {
             from {
                 opacity: 0;
-                transform: translateY(20px);
             }
             to {
                 opacity: 1;
-                transform: translateY(0);
             }
         }
 
-        .fade-in {
-            opacity: 0;
-            animation: fadeInUp 0.6s ease-out forwards;
-        }
-
-        .fade-in:nth-child(1) {
-            animation-delay: 0.2s;
-        }
-
-        .fade-in:nth-child(2) {
-            animation-delay: 0.4s;
+        @keyframes slideIn {
+            from {
+                transform: translateY(-20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
         }
     </style>
-
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            AOS.init({
-                duration: 900,
-                easing: 'ease-out-cubic',
-                once: true
-            });
-        });
-    </script>
 @endsection
+
