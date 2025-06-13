@@ -63,21 +63,21 @@ class FashionController extends Controller
                 'id' => 4,
                 'name' => 'Graphic T-Shirt',
                 'price' => '200K Rp',
-                'image' => 'product1.jpg', // Using same image for demo
+                'image' => 'product1.jpg', 
                 'category' => 'tops'
             ],
             [
                 'id' => 5,
                 'name' => 'Slim Fit Jeans',
                 'price' => '300K Rp',
-                'image' => 'product2.jpg', // Using same image for demo
+                'image' => 'product2.jpg',
                 'category' => 'bottoms'
             ],
             [
                 'id' => 6,
                 'name' => 'Baseball Cap',
                 'price' => '100K Rp',
-                'image' => 'product3.jpg', // Using same image for demo
+                'image' => 'product3.jpg',
                 'category' => 'accessories'
             ]
         ];

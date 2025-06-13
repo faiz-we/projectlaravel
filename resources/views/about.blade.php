@@ -18,15 +18,15 @@
         <div class="container">
             <h2>Who We Are</h2>
             <p>
-                Founded in 2010, Fashion Site has been at the forefront of contemporary fashion, blending style with comfort and sustainability. Our mission is to provide high-quality, fashionable clothing that doesn't compromise on ethics or the environment.
+                Dunia Fashion adalah brand fashion lokal yang didirikan dengan semangat untuk menghadirkan gaya berpakaian yang trendi, nyaman, dan berkualitas bagi semua kalangan. Berdiri sejak tahun 2025, Dunia Fashion telah berkembang dari sebuah toko kecil menjadi bisnis fashion yang dipercaya oleh banyak pelanggan di seluruh Indonesia.
             </p>
             <p>
-                From our humble beginnings as a small boutique to becoming a recognized name in fashion, we've stayed true to our core values of innovation, quality, and customer satisfaction.
+               Kami percaya bahwa fashion bukan hanya tentang penampilan, tetapi juga tentang ekspresi diri. Oleh karena itu, setiap koleksi yang kami hadirkan selalu mengutamakan kombinasi antara gaya modern, kenyamanan bahan, dan sentuhan unik khas Dunia Fashion.
             </p>
         </div>
     </section>
 
-    <!-- Team Section -->
+    <!-- Tim -->
     <section class="team-section">
         <div class="container">
             <h2>Meet The Team</h2>
@@ -55,7 +55,6 @@
     </section>
 
     <style>
-        /* General Reset & Fonts */
         body {
             font-family: 'Segoe UI', sans-serif;
             margin: 0;
@@ -71,7 +70,7 @@
             padding: 0 20px;
         }
 
-        /* Hero Section */
+
         .about-hero {
             background: linear-gradient(to right, #6a82fb, #fc5c7d);
             color: white;
@@ -91,7 +90,7 @@
             opacity: 0.9;
         }
 
-        /* About Content */
+
         .about-content {
             padding: 60px 20px;
             background: #ffffff;
@@ -114,7 +113,7 @@
             color: #555;
         }
 
-        /* Team Section */
+
         .team-section {
             background-color: #f2f2f2;
             padding: 60px 20px;
@@ -180,7 +179,7 @@
             color: #555;
         }
 
-        /* Animations */
+        
         @keyframes fadeIn {
             from {
                 opacity: 0;

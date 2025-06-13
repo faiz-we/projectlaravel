@@ -23,7 +23,7 @@
                 <p class="section-subtitle">Handpicked selections for your wardrobe</p>
             </div>
             <div class="product-grid">
-                <!-- Product 1 -->
+                <!-- kotak 1 -->
                 <div class="product-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="product-badge">
                         <span class="new-badge">New Arrival</span>
@@ -42,7 +42,7 @@
                     <button class="btn btn-add-to-cart">Add to Cart</button>
                 </div>
 
-                <!-- Product 2 -->
+                <!-- kotak 2 -->
                 <div class="product-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="product-badge">
                         <span class="new-badge">New Arrival</span>
@@ -59,7 +59,7 @@
                     <button class="btn btn-add-to-cart">Add to Cart</button>
                 </div>
 
-                <!-- Product 3 -->
+                <!-- kotak 3 -->
                 <div class="product-card" data-aos="fade-up" data-aos-delay="300">
                     <div class="product-badge">
                         <span class="discount-badge">-20%</span>
@@ -310,7 +310,7 @@
         }
     </style>
 
-    <!-- Animation on Scroll Library -->
+    
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>

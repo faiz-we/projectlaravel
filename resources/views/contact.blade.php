@@ -3,8 +3,60 @@
 @section('title', 'Contact Us')
 
 @section('content')
+
+    <section class="contact-hero">
+        <div class="container">
+            <h1>Get In Touch</h1>
+        </div>
+    </section>
+
+    <section class="contact-content">
+        <div class="container">
+            <div class="contact-grid" role="main">
+                <aside class="contact-info" aria-label="Contact Information">
+                    <h2>Contact Information</h2>
+                    <ul>
+                        <li><strong>Email:</strong> {{ $contact['email'] }}</li>
+                        <li><strong>Phone:</strong> {{ $contact['phone'] }}</li>
+                        <li><strong>Address:</strong> {{ $contact['address'] }}</li>
+                    </ul>
+
+                    <h3>Business Hours</h3>
+                    <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                    <p>Saturday: 10:00 AM - 4:00 PM</p>
+                    <p>Sunday: Closed</p>
+                </aside>
+
+                <section class="contact-form" aria-label="Send a message form">
+                    <h2>Send Us a Message</h2>
+                    <form novalidate>
+                        <div class="form-group">
+                            <label for="name">Name<span aria-hidden="true">*</span></label>
+                            <input type="text" id="name" name="name" required aria-required="true" aria-describedby="nameNote">
+                            <span id="nameNote" class="sr-only">Required</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email<span aria-hidden="true">*</span></label>
+                            <input type="email" id="email" name="email" required aria-required="true" aria-describedby="emailNote">
+                            <span id="emailNote" class="sr-only">Required</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" aria-describedby="subjectNote">
+                            <span id="subjectNote" class="sr-only">Optional</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message<span aria-hidden="true">*</span></label>
+                            <textarea id="message" name="message" rows="5" required aria-required="true" aria-describedby="messageNote"></textarea>
+                            <span id="messageNote" class="sr-only">Required</span>
+                        </div>
+                        <button type="submit" class="btn" aria-label="Send message button">Send Message</button>
+                    </form>
+                </section>
+            </div>
+        </div>
+    </section>
     <style>
-        /* Color Palette: Soft Blues with Warm Accents */
         :root {
             --primary-color: #3a86ff;
             --primary-dark: #265bb5;
@@ -205,64 +257,12 @@
             outline: none;
         }
 
-        /* Accessibility focus outline */
+
         input:focus-visible, textarea:focus-visible, button:focus-visible {
             outline: 3px solid var(--accent-color);
             outline-offset: 4px;
         }
     </style>
 
-    <section class="contact-hero">
-        <div class="container">
-            <h1>Get In Touch</h1>
-        </div>
-    </section>
-
-    <section class="contact-content">
-        <div class="container">
-            <div class="contact-grid" role="main">
-                <aside class="contact-info" aria-label="Contact Information">
-                    <h2>Contact Information</h2>
-                    <ul>
-                        <li><strong>Email:</strong> {{ $contact['email'] }}</li>
-                        <li><strong>Phone:</strong> {{ $contact['phone'] }}</li>
-                        <li><strong>Address:</strong> {{ $contact['address'] }}</li>
-                    </ul>
-
-                    <h3>Business Hours</h3>
-                    <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
-                    <p>Saturday: 10:00 AM - 4:00 PM</p>
-                    <p>Sunday: Closed</p>
-                </aside>
-
-                <section class="contact-form" aria-label="Send a message form">
-                    <h2>Send Us a Message</h2>
-                    <form novalidate>
-                        <div class="form-group">
-                            <label for="name">Name<span aria-hidden="true">*</span></label>
-                            <input type="text" id="name" name="name" required aria-required="true" aria-describedby="nameNote">
-                            <span id="nameNote" class="sr-only">Required</span>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email<span aria-hidden="true">*</span></label>
-                            <input type="email" id="email" name="email" required aria-required="true" aria-describedby="emailNote">
-                            <span id="emailNote" class="sr-only">Required</span>
-                        </div>
-                        <div class="form-group">
-                            <label for="subject">Subject</label>
-                            <input type="text" id="subject" name="subject" aria-describedby="subjectNote">
-                            <span id="subjectNote" class="sr-only">Optional</span>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message<span aria-hidden="true">*</span></label>
-                            <textarea id="message" name="message" rows="5" required aria-required="true" aria-describedby="messageNote"></textarea>
-                            <span id="messageNote" class="sr-only">Required</span>
-                        </div>
-                        <button type="submit" class="btn" aria-label="Send message button">Send Message</button>
-                    </form>
-                </section>
-            </div>
-        </div>
-    </section>
 @endsection
 
